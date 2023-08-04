@@ -13,6 +13,7 @@ public class Controlador extends HttpServlet {
     String LOGIN = "index.jsp";
     String reporte = "views/Reportes.jsp";
     String reportesCrear = "views/ReportesCrear.jsp";
+    String UsuariosCrear = "views/UsuariosCrear.jsp";
     String Usuarios = "views/Usuarios.jsp";
     String acceso = "";
 
@@ -20,7 +21,7 @@ public class Controlador extends HttpServlet {
         String page = request.getParameter("accion");
         //========================================================================================== GLOBALES
         HttpSession session = request.getSession();
-        responsables usu = (responsables) session.getAttribute("responsables");
+        responsable usu = (responsable) session.getAttribute("responsables");
         //if (usu == null) {
         // si no existe un usuario activo en el servidor se redirige al login
         //request.setAttribute("errorSesion", "Debes iniciar sesion, para acceder al contenido!!");
@@ -29,6 +30,9 @@ public class Controlador extends HttpServlet {
         switch (page) {
             case "responsables":
                 acceso = Usuarios;
+                break;
+            case "responsablesCrear":
+                acceso = UsuariosCrear;
                 break;
             case "reporte":
                 acceso = reporte;

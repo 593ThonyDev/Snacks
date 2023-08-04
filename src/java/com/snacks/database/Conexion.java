@@ -6,7 +6,7 @@ public class Conexion {
 
     public static Connection getConexion() {
         Connection cn = null;
-        String DATA_BASE = "papeleria";
+        String DATA_BASE = "snacks";
         String USER = "root";
         String HOST = "localhost";
         String PASSWORD = "";

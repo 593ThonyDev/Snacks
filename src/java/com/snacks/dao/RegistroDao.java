@@ -18,11 +18,11 @@ public class RegistroDao implements crudRegistro{
     ResultSet rs;
 
     //variables para los procedimientos almacenados
-    String getAll = "CALL spLeerRegistro()";
-    String getById = "CALL spObtenerRegistroPorID(?)";
-    String add = "CALL spCrearRegistro(?,?,?,?,?)";
-    String update = "CALL spActualizarRegistro(?,?,?,?,?,?)";
-    String delete = "CALL spEliminarRegistro(?)";
+    String getAll = "CALL SeleccionarTodosRegistros()";
+    String getById = "CALL SeleccionarRegistroPorID(?)";
+    String add = "CALL InsertarRegistro(?,?,?,?,?,?,?,?,?,?,?)";
+    String update = "CALL ActualizarRegistroPorID(?,?,?,?,?,?,?,?,?,?,?,?)";
+    String delete = "CALL EliminarRegistroPorID(?)";
 
     @Override
     public List getAll() {

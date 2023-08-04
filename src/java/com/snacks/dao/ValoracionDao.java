@@ -16,11 +16,11 @@ public class ValoracionDao implements crudValoracion{
     ResultSet rs;
 
     //variables para los procedimientos almacenados
-    String getAll = "CALL spLeerValoracion()";
-    String getById = "CALL spObtenerValoracionPorID(?)";
-    String add = "CALL spCrearValoracion?,?,?,?,?)";
-    String update = "CALL spActualizarValoracion(?,?,?,?,?,?)";
-    String delete = "CALL spEliminarValoracion(?)";
+    String getAll = "CALL SeleccionarTodosValoraciones()";
+    String getById = "CALL SeleccionarValoracionPorID(?)";
+    String add = "CALL InsertarValoracion(?,?,?,?)";
+    String update = "CALL ActualizarValoracionPorID(?,?,?,?,?)";
+    String delete = "CALL EliminarValoracionPorID(?)";
 
     @Override
     public List getAll() {

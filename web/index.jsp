@@ -41,16 +41,16 @@
                                             <div class="col-12">
                                                 <div class="col-12">
                                                     <label class="form-label">Usuario</label>
-                                                    <input type="TEXT" name="usuUsuario" class="form-control" required>
+                                                    <input type="text" name="resUsuario" class="form-control" required>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <label for="yourPassword" class="form-label">Clave</label>
-                                                <input type="password" name="usuClave" class="form-control"required>
+                                                <input type="password" name="resClave" class="form-control"required>
                                             </div>
                                             <div class="col-12">
-                                                <!--<input class="btn btn-primary w-100" style="border: none; height: 50px" type="submit" value="INGRESAR" name="btn-login">-->
-                                                <a href="Controlador?accion=reporte" class="btn btn-primary w-100" style="border: none; height: 50px">INGRESAR</a>
+                                                <input class="btn btn-primary w-100" style="border: none; height: 50px" type="submit" value="INGRESAR" name="btn-login">
+                                                <!--<a href="Controlador?accion=reporte" class="btn btn-primary w-100" style="border: none; height: 50px">INGRESAR</a>-->
                                             </div>
                                             <center>
                                                 <h5 style="color: #007bb6;">${errorSesion}</h5>

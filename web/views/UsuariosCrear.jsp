@@ -77,9 +77,8 @@
                         <div class="collapse navbar-collapse justify-content-between">
                             <div class="header-left">
                                 <div class="dashboard_bar">
-                                    Reportes
+                                    Responsables
                                 </div>
-
                             </div>
                             <ul class="navbar-nav header-right">
                                 <li class="nav-item dropdown">
@@ -122,30 +121,7 @@
                             </a>
 
                         </li>
-                    </ul>
-                    <div class="side-bar-profile">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="side-bar-profile-img">
-                                <img src="images/user.jpg" alt="">
-                            </div>
-                            <div class="profile-info1">
-                                <h4 class="fs-18 font-w500">Soeng Souy</h4>
-                                <span>example@mail.com</span>
-                            </div>
-                            <div class="profile-button">
-                                <i class="fas fa-caret-down scale5 text-light"></i>
-                            </div>
-                        </div>	
-                        <div class="d-flex justify-content-between mb-2 progress-info">
-                            <span class="fs-12"><i class="fas fa-star text-orange me-2"></i>Task Progress</span>
-                            <span class="fs-12">20/45</span>
-                        </div>
-                        <div class="progress default-progress">
-                            <div class="progress-bar bg-gradientf progress-animated" style="width: 45%; height:10px;" role="progressbar">
-                                <span class="sr-only">45% Complete</span>
-                            </div>
-                        </div>
-                    </div>
+                    </ul>                    
                 </div>
             </div>
             <!--**********************************
@@ -159,65 +135,32 @@
                 <!-- row -->
                 <div class="container-fluid">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Horizontal Form</h4>
-                        </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form>
-
+                                <form action="Responsables" method="Post">
                                     <div class="row">
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Nombres</label>
-                                            <input type="text" class="form-control" placeholder="1234 Main St">
+                                            <input name="resNombres" type="text" class="form-control" placeholder="Popeye">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Apellidos</label>
-                                            <input type="txt" class="form-control" placeholder="Email">
+                                            <input name="resApellidos" type="txt" class="form-control" placeholder="Marino">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Rol</label>
-                                            <input type="text" class="form-control" placeholder="Password">
+                                            <input name="resRole" type="text" class="form-control" placeholder="Administrador" value="Administrador">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Usuario</label>
-                                            <input type="text" class="form-control" placeholder="Password">
+                                            <input name="resUsuario" type="text" class="form-control" placeholder="1729282726">
                                         </div><!-- comment -->
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Clave</label>
-                                            <input type="password" class="form-control" placeholder="Password">
-                                        </div>
-                                        <div class="mb-3 col-md-6">
-                                            <label>City</label>
-                                            <input type="text" class="form-control">
+                                            <input name="resClave" type="password" class="form-control" placeholder="admin">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="mb-3 col-md-4">
-                                            <label class="form-label">State</label>
-                                            <select id="inputState" class="default-select form-control wide" style="display: none;">
-                                                <option selected="">Choose...</option>
-                                                <option>Option 1</option>
-                                                <option>Option 2</option>
-                                                <option>Option 3</option>
-                                                <option>Option 4</option>
-                                                <option>Option 5</option>
-                                            </select><div class="nice-select default-select form-control wide" tabindex="0"><span class="current">Choose...</span><ul class="list"><li data-value="Choose..." class="option selected">Choose...</li><li data-value="Option 1" class="option">Option 1</li><li data-value="Option 2" class="option">Option 2</li><li data-value="Option 3" class="option">Option 3</li></ul></div>
-                                        </div>
-                                        <div class="mb-3 col-md-2">
-                                            <label class="form-label">Zip</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox">
-                                            <label class="form-check-label">
-                                                Check me out
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                    <input type="submit" class="btn btn-primary" name="accion" value="guardar">
                                 </form>
                             </div>
                         </div>

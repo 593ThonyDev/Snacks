@@ -158,22 +158,21 @@
             <div class="content-body">
                 <!-- row -->
                 <div class="container-fluid">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">INICIO</h2>
-                        </div>
+                    <div class="card">                       
                         <div class="card-body">
                             <div class="basic-form">
-                                <form>
-
+                                <form action="Registro" method="post">
                                     <div class="row">
+                                        <div class="card-header mb-3">
+                                            <h3>Datos generales</h3>
+                                        </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Fecha</label>
                                             <input type="date" class="form-control" placeholder="1234 Main St">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Reponsable Linea</label>
-                                            <input type="txt" class="form-control" placeholder="Responsable">
+                                            <input type="text" class="form-control" placeholder="Responsable">
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Numero de Personas</label>
@@ -181,130 +180,517 @@
                                         </div>
                                         <div class="mb-3 col-md-6">
                                             <label class="form-label">Tipo de Aceite</label>
-                                            <select id="inputState" class="default-select form-control wide" style="display: none;">
-                                                <option selected="">Choose...</option>
-                                                <option>Option 1</option>
-                                                <option>Option 2</option>
-                                                <option>Option 3</option>
-                                                <option>Option 4</option>
-                                            </select><div class="nice-select default-select form-control wide" tabindex="0"><span class="current">Choose...</span><ul class="list"><li data-value="Choose..." class="option selected">Choose...</li><li data-value="Option 1" class="option">Option 1</li><li data-value="Option 2" class="option">Option 2</li><li data-value="Option 3" class="option">Option 3</li></ul></div>
-                                        </div><!-- comment -->
+                                            <input type="text" class="form-control" >    
+                                        </div>
                                         <div class="mb-3 col-md-6">
-                                            <hr><hr> 
-                                            <h4>PREPARACION</h4>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Hora Inicial Preparacion</label>
-                                                <input type="time" class="form-control" placeholder="1234 Main St">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Nivel Inicial Aceite(cm):</label>
-                                                <input type="number" class="form-control" placeholder="cm">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Aceite utilizado para arranque de cocinas(kg)</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Numero de Programa(solo TFJ):</label>
-                                                <input type="number" class="form-control" placeholder="cm">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Hora Final Preparacion:</label>
-                                                <input type="time" class="form-control" placeholder="1234 Main St">
-                                            </div>
-                                            <hr><hr> 
-                                            <h4>INSUMOS</h4>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Sal</label>
-                                                <input type="text" class="form-control" placeholder="Lote">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Cantidad(kg)</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Saborizante</label>
-                                                <input type="text" class="form-control" placeholder="Sabor">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Cantidad(kg)</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Fundas</label>
-                                                <input type="text" class="form-control" placeholder="Sabor">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Cantidad(kg)</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <hr><hr> 
-                                            <h4>OPERACION</h4>
-                                              <h5>Paras en la operacion de la fritura</h5>
-                                            <div class="mb-3 col-md-6">
-                                               <label class="form-label">Detalle</label>
-                                                <input type="text" class="form-control" placeholder="Detalle">
-                                                <label class="form-label">Hora inicio</label>
-                                                <input type="time" class="form-control" placeholder="">
-                                                <label class="form-label">Hora final</label>
-                                                <input type="time" class="form-control" placeholder="">
-                                            </div>
-      <hr><hr> 
-                                            <h4>Reposicion de aceite por fritura</h4>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Lote</label>
-                                                <input type="text" class="form-control" placeholder="Aceite nuevo">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Aceite usado</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Aceite Inicial(kg)</label>
-                                                <input type="number" class="form-control" placeholder="Aceite nuevo">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Aceite usado</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Aceite utilizado(kg)</label>
-                                                <input type="number" class="form-control" placeholder="Aceite nuevo">
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label class="form-label">Aceite usado(kg)</label>
-                                                <input type="number" class="form-control" placeholder="kg">
-                                            </div>
-                                            <hr><hr>
-                                            <label>City</label>
-                                            <input type="text" class="form-control">
+                                            <label class="form-label">Insumo sal Lote</label>
+                                            <input type="text" class="form-control" >    
                                         </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Insumo sal Cantidad (kg)</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Insumo saborizante lote</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Insumo saborizante (kg)</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Insumo Fundas lote</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <br>                                        
+                                        <div class="card-header mb-3">
+                                            <h3>Preparacion</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Hora inicio Preparacion</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Nivel inicial aceite</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">aceite arranque de cocinas</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">No. Programa</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">hora final Preparacion</label>
+                                            <input type="text" class="form-control" >    
+                                        </div>
+                                        <div class="card-header mb-3">
+                                            <h3>Operacion (Paras en operacion de fritura)</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <label class="form-label">Detalle</label>
+                                                    <input type="text" class="form-control" placeholder="Razon">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Inicio</label>
+                                                    <input type="text" class="form-control" placeholder="10:40">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Fin</label>
+                                                    <input type="text" class="form-control" placeholder="10:50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <label class="form-label">Detalle</label>
+                                                    <input type="text" class="form-control" placeholder="Razon">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Inicio</label>
+                                                    <input type="text" class="form-control" placeholder="10:40">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Fin</label>
+                                                    <input type="text" class="form-control" placeholder="10:50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <label class="form-label">Detalle</label>
+                                                    <input type="text" class="form-control" placeholder="Razon">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Inicio</label>
+                                                    <input type="text" class="form-control" placeholder="10:40">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Fin</label>
+                                                    <input type="text" class="form-control" placeholder="10:50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <label class="form-label">Detalle</label>
+                                                    <input type="text" class="form-control" placeholder="Razon">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Inicio</label>
+                                                    <input type="text" class="form-control" placeholder="10:40">
+                                                </div>
+                                                <div class="col mt-2 mt-sm-0">
+                                                    <label class="form-label">Fin</label>
+                                                    <input type="text" class="form-control" placeholder="10:50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-header mb-3">
+                                            <h3>Reposicion de aciete por fritura</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote acite nuevo</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote acite usado</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Incial aceite nuevo</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Inicial aceite usado</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                        
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Final aceite nuevo</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Final aceite usado</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Usado aceite nuevo</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Usado aceite usado</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="card-header mb-3">
+                                            <h3>Desperdicio de insumos</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Cantidad fundas nuevas</label>
+                                                    <input type="text" class="form-control" placeholder="1">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Cantidad Etiquetas</label>
+                                                    <input type="text" class="form-control" placeholder="1">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                           
+                                        <div class="card-header mb-3">
+                                            <h3>Plan correccion por desviacion</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-12">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label class="form-label">Descripcion</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>  
+                                        </div>                                                                           
+
+                                        <div class="card-header mb-3">
+                                            <h3>Descipcion del producto 1 fritado</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Producto</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Fundas completas</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">SubTotal (kg)</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                        
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Sobrantes</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Total</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Segunda</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas con Sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas sin sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="card-header mb-3">
+                                            <h3>Descipcion del producto 2 fritado</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Producto</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Fundas completas</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">SubTotal (kg)</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                        
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Sobrantes</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Total</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Segunda</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas con Sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas sin sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="card-header mb-3">
+                                            <h3>Descipcion del producto 3 fritado</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Producto</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Fundas completas</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">SubTotal (kg)</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                        
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Sobrantes</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Total</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Segunda</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas con Sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas sin sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="card-header mb-3">
+                                            <h3>Prueba Fritura 1</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Producto</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Fundas completas</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">SubTotal (kg)</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                        
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Sobrantes</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Total</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Segunda</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas con Sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas sin sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="card-header mb-3">
+                                            <h3>Prueba Fritura 2</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Producto</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Lote</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Fundas completas</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">SubTotal (kg)</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                        
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Sobrantes</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Total</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>                                                                                
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Segunda</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas con Sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Migas sin sal</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>                                                
+                                            </div>  
+                                        </div>   
+                                        <div class="card-header mb-3">
+                                            <h3>Finalizacion</h3>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Nivel final aciete (cm)</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label">Hora final operacion</label>
+                                                    <input type="text" class="form-control" placeholder="aciete usado">
+                                                </div>                                                
+                                            </div>  
+                                        </div>
+                                        <div class="mb-3 col-md-12">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label class="form-label">Obserbacion</label>
+                                                    <input type="text" class="form-control" placeholder="aciete nuevo">
+                                                </div>                                                                                               
+                                            </div>  
+                                        </div>                                                                                 
                                     </div>
-                                    <div class="row">
-                                        <div class="mb-3 col-md-4">
-                                            <label class="form-label">State</label>
-                                            <select id="inputState" class="default-select form-control wide" style="display: none;">
-                                                <option selected="">Choose...</option>
-                                                <option>Option 1</option>
-                                                <option>Option 2</option>
-                                                <option>Option 3</option>
-                                                <option>Option 4</option>
-                                            </select><div class="nice-select default-select form-control wide" tabindex="0"><span class="current">Choose...</span><ul class="list"><li data-value="Choose..." class="option selected">Choose...</li><li data-value="Option 1" class="option">Option 1</li><li data-value="Option 2" class="option">Option 2</li><li data-value="Option 3" class="option">Option 3</li></ul></div>
-                                        </div>
-                                        <div class="mb-3 col-md-2">
-                                            <label class="form-label">Zip</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox">
-                                            <label class="form-check-label">
-                                                Check me out
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                    <input type="submit" class="btn btn-primary" name="accion" value="guardar">
                                 </form>
                             </div>
                         </div>

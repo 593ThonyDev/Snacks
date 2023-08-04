@@ -4,9 +4,25 @@
         <servlet-name>Controlador</servlet-name>
         <servlet-class>com.snacks.controller.Controlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Responsables</servlet-name>
+        <servlet-class>com.snacks.controller.Responsables</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.snacks.controller.Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Responsables</servlet-name>
+        <url-pattern>/Responsables</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

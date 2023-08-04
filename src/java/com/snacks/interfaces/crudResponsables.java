@@ -1,16 +1,19 @@
 package com.snacks.interfaces;
-import com.snacks.model.responsables;
+
+import com.snacks.model.responsable;
 import java.util.*;
 
 public interface crudResponsables {
-    
+
     List getAll();
 
-    responsables getById(Integer id);
+    responsable getById(Integer id);
 
-    String add(responsables responsables);
+    Integer getIdResponsable(String resUsuario);
 
-    String updateById(responsables responsables);
+    String add(responsable responsables);
+
+    String updateById(responsable responsables);
 
     String deleteById(Integer id);
 }

@@ -16,11 +16,11 @@ public class ProductoDao implements crudProducto{
     ResultSet rs;
 
     //variables para los procedimientos almacenados
-    String getAll = "CALL spLeerProducto()";
-    String getById = "CALL spObtenerProductoPorID(?)";
-    String add = "CALL spCrearProducto(?,?,?,?,?)";
-    String update = "CALL spActualizarProducto(?,?,?,?,?,?)";
-    String delete = "CALL spEliminarProducto(?)";
+    String getAll = "CALL SeleccionarTodosProductos()";
+    String getById = "CALL SeleccionarProductoPorID(?)";
+    String add = "CALL InsertarProducto(?,?,?)";
+    String update = "CALL spActualizarProducto(?,?,?,?)";
+    String delete = "CALL EliminarProductoPorID(?)";
 
 
     @Override

@@ -1,4 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="com.snacks.model.*"%>
+<%@page import="com.snacks.dao.*"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -77,14 +81,13 @@
                         <div class="collapse navbar-collapse justify-content-between">
                             <div class="header-left">
                                 <div class="dashboard_bar">
-                                    Reportes
+                                    Responsables
                                 </div>
-
                             </div>
                             <ul class="navbar-nav header-right">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                                       ADRIAN
+                                        ADRIAN
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end">
                                         <a href="page-error-404.html" class="dropdown-item ai-icon">
@@ -158,7 +161,43 @@
             <div class="content-body">
                 <!-- row -->
                 <div class="container-fluid">
-
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form action="Responsables" method="Post">
+                                    <div class="row">
+                                        <%
+                                            ResponsablesDao dao = new ResponsablesDao();
+                                            int id = Integer.parseInt((String) request.getParameter("idResponsable"));
+                                            responsable cli = (responsable)dao.getById(id);
+                                        %>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Nombres</label>
+                                            <input name="resNombres" value="<%= cli.getResNombres()%>" type="text" class="form-control" placeholder="Popeye">
+                                            <input name="idResponsable" value="<%= cli.getIdResponsables()%>" type="hidden" >
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Apellidos</label>
+                                            <input name="resApellidos" value="<%= cli.getResNombres()%>" type="txt" class="form-control" placeholder="Marino">
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Rol</label>
+                                            <input name="resRole" value="<%= cli.getResRole()%>" type="text" class="form-control" placeholder="Administrador" value="Administrador">
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Cedula</label>
+                                            <input name="resUsuario" value="<%= cli.getResUsuario()%>" type="text" class="form-control" placeholder="1729282726">
+                                        </div><!-- comment -->
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label">Clave</label>
+                                            <input name="resClave" value="<%= cli.getResClave()%>" type="password" class="form-control" placeholder="admin">
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" name="accion" value="actualizar">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--**********************************
